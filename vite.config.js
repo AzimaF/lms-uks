@@ -2,6 +2,11 @@ import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  // --- PERUBAHAN UTAMA DI SINI ---
+  // Menambahkan base URL sesuai nama repository GitHub agar aset terbaca
+  base: "/lms-uks/", 
+  // -------------------------------
+
   server: {
     historyApiFallback: true,
   },
@@ -13,7 +18,13 @@ export default defineConfig({
         name: "lms",
         short_name: "lms",
         description: "Aplikasi diagnosis penyakit tuberkulosis",
-        start_url: "/",
+        
+        // --- PERUBAHAN PWA ---
+        // start_url harus mengarah ke folder repository, bukan root domain
+        start_url: "/lms-uks/",
+        scope: "/lms-uks/",
+        // ---------------------
+
         display: "standalone",
         theme_color: "#3B82F6",
         background_color: "#FFFFFF",
