@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Palet Warna UKS Muhammadiyah 36 & Medis */
+  --color-peach: #00897b;        /* Hijau Teal Medis (Primary) */
+  --color-darkblue: #004d40;     /* Hijau Tua Muhammadiyah (Text/Nav) */
+  --color-lightgray: #e2e8f0;    /* Abu-abu terang untuk border */
+  --color-lightergray: #f1f5f9;  /* Background elemen */
+  --color-background: #f8fafc;   /* Background utama (Putih bersih) */
+  --color-surface: #ffffff;
+  --color-text: #0f172a;         /* Slate gelap untuk keterbacaan tinggi */
+  --color-text-light: #64748b;
+  --color-border: #cbd5e1;
+  --color-accent: #fbc02d;       /* Kuning emas sebagai aksen kecil */
+}
+
+@layer components {
+  /* Tombol Utama - Tema Hijau */
+  .btn-primary {
+    @apply px-6 py-3 bg-[color:var(--color-peach)] text-white rounded-xl font-semibold 
+    hover:bg-[color:var(--color-darkblue)] transition-all duration-300 
+    hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[color:var(--color-peach)] 
+    focus:ring-offset-2 shadow-lg hover:shadow-xl;
+  }
+
+  /* Tombol Sekunder - Hijau Tua */
+  .btn-secondary {
+    @apply px-6 py-3 bg-[color:var(--color-darkblue)] text-white rounded-xl font-semibold
+    hover:bg-opacity-90 transition-all duration-300 focus:outline-none 
+    focus:ring-2 focus:ring-[color:var(--color-darkblue)] focus:ring-offset-2 
+    shadow-lg hover:shadow-xl;
+  }
+
+  /* Link Navigasi */
+  .nav-link {
+    @apply px-4 py-2 rounded-lg font-semibold text-[color:var(--color-darkblue)] 
+    hover:bg-[color:var(--color-lightergray)] hover:text-[color:var(--color-peach)] 
+    transition-colors duration-200;
+  }
+
+  /* Link Aktif - Menjadi Hijau Tua */
+  .nav-link-active {
+    @apply bg-[color:var(--color-darkblue)] text-white shadow font-bold;
+  }
+
+  /* Kartu Materi/LMS - Ditambah Aksen Hijau di Atas */
+  .card {
+    @apply bg-white rounded-2xl shadow-md p-8 transition-all duration-300 
+    hover:shadow-xl border-t-4 border-t-[color:var(--color-peach)] 
+    border-x border-b border-[color:var(--color-border)] flex flex-col gap-6;
+    animation: fadeInUp 0.6s ease-out both;
+  }
+
+  .input-field, .select-field {
+    @apply w-full px-4 py-3 border border-[color:var(--color-border)] rounded-xl 
+    focus:outline-none focus:ring-2 focus:ring-[color:var(--color-peach)] 
+    transition-all duration-300 bg-white shadow-sm text-[color:var(--color-text)] 
+    placeholder:text-[color:var(--color-text-light)];
+  }
+
+  /* Area Upload Diagnosis */
+  .upload-area {
+    @apply flex flex-col items-center justify-center border-2 border-dashed 
+    border-[color:var(--color-border)] rounded-xl p-8 bg-[color:var(--color-lightergray)] 
+    hover:border-[color:var(--color-peach)] transition-all duration-300 
+    cursor-pointer hover:bg-white;
+  }
+}
+
+/* Modal Diagnosis */
+#diagnosisModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 77, 64, 0.5); /* Overlay hijau transparan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.diagnosis-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  max-width: 650px;
+  width: 90%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  font-family: 'Inter', sans-serif;
+  border-top: 8px solid var(--color-peach);
+}
+
+/* Checkbox Gejala TBC */
+.symptoms-container label {
+  flex: 1 1 45%;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.symptoms-container label:hover {
+  background-color: #f1f5f9;
+  border-color: var(--color-peach);
+}
+
+.symptoms-container input[type="checkbox"]:checked + span,
+.symptoms-container input[type="checkbox"]:checked + label {
+  background-color: #f0fdfa;
+  border-color: var(--color-peach);
+  color: var(--color-darkblue);
+}
+
+/* Glass Effect untuk Halaman Baru */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 77, 64, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-glass {
+  background: linear-gradient(135deg, var(--color-peach) 0%, var(--color-darkblue) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 700;
+  padding: 0.8rem 0;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 137, 123, 0.3);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-glass:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 137, 123, 0.4);
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.loader {
+  border: 4px solid #f1f5f9;
+  border-top-color: var(--color-peach);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
