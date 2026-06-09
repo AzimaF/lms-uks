@@ -1,4 +1,4 @@
-class n{constructor(e){this.container=e}render(){const e=parseInt(localStorage.getItem("userLevel"))||1,t=localStorage.getItem("tbcCourseCompleted")==="true",l=3;let a=0,s="Mulai Pembelajaran Sekarang";t?(a=100,s="Belajar Lagi"):(a=Math.round((e-1)/l*100),a>0&&(s="Lanjutkan Belajar")),this.container.innerHTML=`
+const r="/lms-uks/materi-tbc.png";class i{constructor(e){this.container=e}render(){const e=parseInt(localStorage.getItem("userLevel"))||1,t=localStorage.getItem("tbcCourseCompleted")==="true",l=3;let a=0,s="Mulai Pembelajaran Sekarang";t?(a=100,s="Belajar Lagi"):(a=Math.round((e-1)/l*100),a>0&&(s="Lanjutkan Belajar")),this.container.innerHTML=`
       <section class="max-w-6xl mx-auto p-6 animate-fade-in">
         <div class="text-center mb-12">
           <h1 class="text-4xl font-bold text-[color:var(--color-darkblue)] mb-3">Pembelajaran UKS</h1>
@@ -9,7 +9,7 @@ class n{constructor(e){this.container=e}render(){const e=parseInt(localStorage.g
           <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row hover:shadow-2xl transition-all duration-500 group-card">
             
             <div class="md:w-1/2 relative group">
-              <img src="materi-tbc.png" alt="Edukasi Tuberkulosis" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+              <img src="${r}" alt="Edukasi Tuberkulosis" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
               <div class="absolute top-4 left-4">
                 <span class="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                   Kelas Gratis
@@ -67,4 +67,4 @@ class n{constructor(e){this.container=e}render(){const e=parseInt(localStorage.g
           </p>
         </div>
       </section>
-    `}}export{n as default};
+    `}}export{i as default};
