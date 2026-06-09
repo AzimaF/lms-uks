@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/lms-ukks/sw.js', { scope: '/lms-ukks/' })})}
