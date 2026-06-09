@@ -94,7 +94,7 @@ server.route({
     try {
       // 1. Mengirim data ke port 7860 (Port Flask Anda)
       const response = await axios.post(
-        "http://127.0.0.1:7860/predict",
+        `${process.env.AI_API_URL || "http://127.0.0.1:7860"}/predict`,
         { data }
       );
 
@@ -155,7 +155,7 @@ server.route({
 
         // Pastikan URL mengarah ke port Python (7860)
         const response = await axios.post(
-            "http://127.0.0.1:7860/predict-image", 
+            `${process.env.AI_API_URL || "http://127.0.0.1:7860"}/predict-image`, 
             formData,
             { headers: formData.getHeaders() }
         );

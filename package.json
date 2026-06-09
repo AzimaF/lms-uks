@@ -1,0 +1,8 @@
+{
+  "name": "lms-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd lms_backend-main/lms_backend-main && npm start",
+    "install": "cd lms_backend-main/lms_backend-main && npm install"
+  }
+}
