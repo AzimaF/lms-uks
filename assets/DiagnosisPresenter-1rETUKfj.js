@@ -28,7 +28,7 @@ function Te(t,e){return function(){return t.apply(e,arguments)}}const{toString:Y
       </div>
 
       <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
-        <img src="/uks-icon.png" alt="Logo" class="h-12 w-12 object-contain">
+        <img src="uks-icon.png" alt="Logo" class="h-12 w-12 object-contain">
         <div>
             <h2 class="text-2xl font-black text-teal-800">Hasil Analisis Gejala</h2>
             <p class="text-xs text-gray-500">LMS UKS SMP Muhammadiyah 36 - Tanggal: ${new Date().toLocaleDateString("id-ID")}</p>
@@ -104,7 +104,7 @@ function Te(t,e){return function(){return t.apply(e,arguments)}}const{toString:Y
       </div>
 
       <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
-        <img src="/uks-icon.png" alt="Logo" class="h-12 w-12 object-contain">
+        <img src="uks-icon.png" alt="Logo" class="h-12 w-12 object-contain">
         <div>
             <h2 class="text-2xl font-bold text-blue-700">Hasil Analisis Rontgen</h2>
             <p class="text-xs text-gray-500">LMS UKS SMP Muhammadiyah 36 - Tanggal: ${new Date().toLocaleDateString("id-ID")}</p>
@@ -153,7 +153,7 @@ function Te(t,e){return function(){return t.apply(e,arguments)}}const{toString:Y
     <div class="container mx-auto px-4">
       <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center gap-6 border border-[color:var(--color-border)]" style="animation: fadeInUp 0.6s ease-out both;">
         <div class="flex flex-col items-center gap-4 mb-8">
-          <img src="/uks-icon.png" alt="Logo UKS" class="h-20 w-20 mb-2 drop-shadow-lg transform hover:scale-105 transition-transform duration-300" />
+          <img src="uks-icon.png" alt="Logo UKS" class="h-20 w-20 mb-2 drop-shadow-lg transform hover:scale-105 transition-transform duration-300" />
           <h1 class="text-4xl font-extrabold text-[color:var(--color-darkblue)] tracking-tight">LMS UKS SMP Muhammadiyah 36</h1>
           <p class="text-[color:var(--color-darkblue)] text-center text-lg font-semibold opacity-80">
             Skrining Penyakit TBC

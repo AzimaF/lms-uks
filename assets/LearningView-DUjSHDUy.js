@@ -9,7 +9,7 @@ class n{constructor(e){this.container=e}render(){const e=parseInt(localStorage.g
           <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row hover:shadow-2xl transition-all duration-500 group-card">
             
             <div class="md:w-1/2 relative group">
-              <img src="/materi-tbc.png" alt="Edukasi Tuberkulosis" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+              <img src="materi-tbc.png" alt="Edukasi Tuberkulosis" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
               <div class="absolute top-4 left-4">
                 <span class="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                   Kelas Gratis
